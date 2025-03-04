@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { HeroSection } from "@/components/hero-section"
-import { FeaturesSection } from "@/components/features-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { CtaSection } from "@/components/cta-section"
-import { PageTransition } from "@/components/page-transition"
+import { Button } from "@/components/ui/button";
+import { HeroSection } from "@/components/hero-section";
+import { FeaturesSection } from "@/components/features-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { CtaSection } from "@/components/cta-section";
+import { PageTransition } from "@/components/page-transition";
 
 export default function Home() {
   return (
@@ -23,10 +23,14 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Mission</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Our Mission
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our mission is to deliver high-quality products and services that exceed our customers' expectations.
-                  We are committed to innovation, excellence, and building lasting relationships with our clients.
+                  Our mission is to deliver high-quality products and services
+                  that exceed our customers' expectations. We are committed to
+                  innovation, excellence, and building lasting relationships
+                  with our clients.
                 </p>
               </div>
             </div>
@@ -51,7 +55,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Quality</h3>
                 <p className="text-center text-muted-foreground">
-                  We are committed to delivering the highest quality in everything we do.
+                  We are committed to delivering the highest quality in
+                  everything we do.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
@@ -76,7 +81,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Integrity</h3>
                 <p className="text-center text-muted-foreground">
-                  We operate with honesty, transparency, and respect in all our interactions.
+                  We operate with honesty, transparency, and respect in all our
+                  interactions.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
@@ -103,7 +109,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Innovation</h3>
                 <p className="text-center text-muted-foreground">
-                  We continuously seek new ideas and solutions to stay ahead of the curve.
+                  We continuously seek new ideas and solutions to stay ahead of
+                  the curve.
                 </p>
               </div>
             </div>
@@ -118,7 +125,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest News</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Latest News
+                </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Stay updated with our latest news and announcements.
                 </p>
@@ -128,18 +137,24 @@ export default function Home() {
               {[1, 2, 3].map((i) => (
                 <div key={i} className="flex flex-col space-y-4">
                   <img
-                    src={`/placeholder.svg?height=200&width=400`}
+                    src={`/placeholder.png?height=200&width=400`}
                     alt="Blog post thumbnail"
                     className="rounded-lg object-cover w-full aspect-video"
                   />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Blog Post Title {i}</h3>
-                    <p className="text-sm text-muted-foreground">January {i + 10}, 2024</p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua.
+                    <p className="text-sm text-muted-foreground">
+                      January {i + 10}, 2024
                     </p>
-                    <Link href={`/blog/post-${i}`} className="inline-flex items-center text-primary">
+                    <p className="text-muted-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <Link
+                      href={`/blog/post-${i}`}
+                      className="inline-flex items-center text-primary"
+                    >
                       Read More <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </div>
@@ -157,6 +172,5 @@ export default function Home() {
         <CtaSection />
       </div>
     </PageTransition>
-  )
+  );
 }
-
